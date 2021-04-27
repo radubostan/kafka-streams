@@ -1,4 +1,4 @@
-package com.ibm.kafka.streams.assignment;
+package com.radubostan.kafka;
 
 import static java.util.Collections.singletonMap;
 import static org.junit.Assert.assertEquals;
@@ -30,9 +30,9 @@ import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
 
 
 @SpringBootTest
-class AssignmentApplicationTests {
+class KafkaStreamsApplicationTests {
 	
-	private static final String SCHEMA_REGISTRY_SCOPE = AssignmentApplicationTests.class.getName();
+	private static final String SCHEMA_REGISTRY_SCOPE = KafkaStreamsApplicationTests.class.getName();
 	private static final String MOCK_SCHEMA_REGISTRY_URL = "mock://" + SCHEMA_REGISTRY_SCOPE;
 	
     private TopologyTestDriver topologyTestDriver;
