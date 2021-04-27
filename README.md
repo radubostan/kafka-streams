@@ -1,17 +1,50 @@
-# IBM Kafka Assignment
+# Kafka Streams
 
-This document describes the solution for the IBM Kafka Streams Assignment.
+This project Kafka Streams is a an examples of KStream processing with Avro schemas
 
-## Assignment Requirements
-Full details of the [IBM Assignment](https://ibm.box.com/s/p0wlwqzzac276if1jkzc28gz88nthcqd)
+## Requirements
 
 Problem Statement:
 
 - Build Kafka Streams applications based on Spring that ingests data from the Customer Topic, Balance Topic, and produces a CustomerBalance topic with the joined streams.
 
+Customer Topic
+
+```
+	{
+	    "customerId",
+	    "name",
+	    "phoneNumber":
+	    "accountId",
+	}
+```
+
+Balance Topic:
+
+```
+	{
+	    "balanceId",
+	    "accountId",
+	    "balance",
+	
+	}
+```
+
+CustomerBalance Topic:
+
+```
+	{
+	    "accountId"
+	    "customerId"
+	    "phoneNumber"
+	    "balance"
+	}
+
+```
+
 Sample Input
 
-	Customer Topic: customer { "a", "mehryar", "888-888-8888", "b"}  
+	Customer Topic: customer { "a", "Robert Hofman", "888-888-8888", "b"}  
 	Balance Topic: balance  { "j", "b", 20.23}
 	
 
@@ -21,6 +54,9 @@ Expected Output
 
 
 ## Software Installation, Configuration and Data Preparation
+
+The project uses Confluent Platform, which is mainly a data streaming platform consisting of most of the Kafka features plus additional functionality 
+(Confluent Control Center is a GUI-based system for managing and monitoring Kafka, Schema Registry, APIs to generate data etc).
 
 First we need to install and launch locally the Confluent services (i.e. Schema Registry, Broker, ZooKeeper, Control Center).
 One option is to use Docker for local installation using [Confluent Docker Installation](https://docs.confluent.io/platform/current/quickstart/ce-docker-quickstart.html#ce-docker-quickstart) 
