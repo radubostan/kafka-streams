@@ -1,6 +1,6 @@
 # Kafka Streams
 
-This project Kafka Streams is a an examples of KStream processing with Avro schemas
+This project is a an examples of KStream processing with Avro schemas
 
 ## Requirements
 
